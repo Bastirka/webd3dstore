@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit – STL Hub</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">STL<span>Hub</span></div>
+      <nav class="nav">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./submit.html" class="nav-link active">Submit</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Submit a model</h1>
+      <p class="muted">This is a static site – submissions generate a prefilled JSON block you can paste into <code>data/stl-index.json</code>.</p>
+      <form id="form" class="form">
+        <div class="row">
+          <label>Name</label>
+          <input name="name" required placeholder="Low-poly Vase" />
+        </div>
+        <div class="row">
+          <label>Description</label>
+          <textarea name="description" rows="3" placeholder="Short description"></textarea>
+        </div>
+        <div class="row">
+          <label>Tags (comma-separated)</label>
+          <input name="tags" placeholder="vase, decor, lowpoly" />
+        </div>
+        <div class="row">
+          <label>Source name</label>
+          <input name="sourceName" placeholder="MakerWorld" />
+        </div>
+        <div class="row">
+          <label>Source URL</label>
+          <input name="sourceUrl" type="url" placeholder="https://makerworld.com/en/models/12345" />
+        </div>
+        <div class="row">
+          <label>Preview image URL</label>
+          <input name="image" type="url" placeholder="https://…" />
+        </div>
+        <div class="row">
+          <label>STL file URL</label>
+          <input name="stl" type="url" placeholder="https://…/model.stl" />
+        </div>
+        <div class="row">
+          <label>Popularity (0–9999)</label>
+          <input name="popularity" type="number" value="0" />
+        </div>
+        <button class="btn primary" type="submit">Generate JSON</button>
+      </form>
+
+      <h3>Output</h3>
+      <pre id="out" class="code"></pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> STL Hub</div>
+      <div><a href="./about.html">About</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('form');
+    const out = document.getElementById('out');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const rec = {
+        id: crypto.randomUUID(),
+        name: fd.get('name')?.trim(),
+        description: fd.get('description')?.trim(),
+        tags: (fd.get('tags')||'').split(',').map(t=>t.trim()).filter(Boolean),
+        source: { name: fd.get('sourceName')?.trim(), url: fd.get('sourceUrl')?.trim() },
+        image: fd.get('image')?.trim(),
+        files: [{ type: 'stl', url: fd.get('stl')?.trim() }],
+        popularity: parseInt(fd.get('popularity')||'0',10),
+        createdAt: new Date().toISOString()
+      };
+      out.textContent = JSON.stringify(rec, null, 2);
+      out.scrollIntoView({behavior:'smooth'});
+    });
+  </script>
+</body>
+</html>

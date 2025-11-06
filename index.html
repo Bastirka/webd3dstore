@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STL Hub – 3D Models Catalog</title>
+  <meta name="description" content="Searchable catalog of 3D STL models with sources and tags." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">STL<span>Hub</span></div>
+      <nav class="nav">
+        <a href="./index.html" class="nav-link active">Home</a>
+        <a href="./submit.html" class="nav-link">Submit</a>
+        <a href="./about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div>
+        <h1>Find your next <span class="accent">3D model</span></h1>
+        <p class="muted">Type a name, tag, or keyword. We’ll search across the catalog and show matches with their sources.</p>
+      </div>
+      <div class="searchbar">
+        <input id="q" type="search" placeholder="Search: gear, Miata, bracket, vase..." autocomplete="off" />
+        <button id="searchBtn" class="btn primary">Search</button>
+      </div>
+      <div class="filters">
+        <select id="sourceFilter">
+          <option value="">All sources</option>
+        </select>
+        <select id="tagFilter">
+          <option value="">All tags</option>
+        </select>
+        <button id="clearFilters" class="btn ghost small">Clear</button>
+      </div>
+    </section>
+
+    <section class="results-header">
+      <div id="count">Loading…</div>
+      <div class="sort">
+        <label for="sortSel">Sort</label>
+        <select id="sortSel">
+          <option value="relevance">Relevance</option>
+          <option value="name">Name A→Z</option>
+          <option value="date">Newest</option>
+          <option value="popularity">Most popular</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="grid" class="grid"></section>
+
+    <nav class="pager">
+      <button id="prev" class="btn" disabled>Prev</button>
+      <span id="pageInfo" class="muted">—</span>
+      <button id="next" class="btn">Next</button>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> STL Hub</div>
+      <div><a href="./about.html">About</a></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

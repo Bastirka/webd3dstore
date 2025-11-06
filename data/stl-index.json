@@ -1,0 +1,142 @@
+[
+  {
+    "id": "makerworld-gearbox",
+    "name": "Compact Gearbox",
+    "description": "High torque 3D printable gearbox.",
+    "tags": [
+      "gear",
+      "mechanical",
+      "transmission"
+    ],
+    "source": {
+      "name": "MakerWorld",
+      "url": "https://makerworld.com/en/models/12345"
+    },
+    "image": "https://images.unsplash.com/photo-1604275684280-8913a67a7a30?w=1200",
+    "files": [
+      {
+        "type": "stl",
+        "url": "https://example.com/gearbox.stl"
+      }
+    ],
+    "popularity": 440,
+    "createdAt": "2025-11-06T10:00:00Z"
+  },
+  {
+    "id": "crealitycloud-spoolholder",
+    "name": "Creality Cloud Spool Holder",
+    "description": "Adjustable filament spool holder for K1/Ender printers.",
+    "tags": [
+      "creality",
+      "printer",
+      "accessory",
+      "holder"
+    ],
+    "source": {
+      "name": "Creality Cloud",
+      "url": "https://www.crealitycloud.com/model-detail/abcdef"
+    },
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=1200",
+    "files": [
+      {
+        "type": "stl",
+        "url": "https://example.com/spoolholder.stl"
+      }
+    ],
+    "popularity": 520,
+    "createdAt": "2025-11-06T14:00:00Z"
+  },
+  {
+    "id": "cults-shelf-bracket",
+    "name": "Shelf Bracket Heavy Duty",
+    "description": "Reinforced bracket for furniture and workshop use.",
+    "tags": [
+      "bracket",
+      "hardware",
+      "furniture"
+    ],
+    "source": {
+      "name": "Cults3D",
+      "url": "https://cults3d.com/en/3d-model/home/shelf-bracket"
+    },
+    "image": "https://images.unsplash.com/photo-1487700160041-babef9c3cb55?w=1200",
+    "files": [
+      {
+        "type": "stl",
+        "url": "https://example.com/bracket.stl"
+      }
+    ],
+    "popularity": 180,
+    "createdAt": "2025-10-01T09:00:00Z"
+  },
+  {
+    "id": "thingiverse-vase",
+    "name": "Low-poly Vase",
+    "description": "Classic low-poly decorative vase.",
+    "tags": [
+      "vase",
+      "decor",
+      "lowpoly"
+    ],
+    "source": {
+      "name": "Thingiverse",
+      "url": "https://www.thingiverse.com/thing:1234567"
+    },
+    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200",
+    "files": [
+      {
+        "type": "stl",
+        "url": "https://example.com/vase.stl"
+      }
+    ],
+    "popularity": 760,
+    "createdAt": "2025-08-20T12:00:00Z"
+  },
+  {
+    "id": "printables-gear20t",
+    "name": "Involute Gear 20T Module 1",
+    "description": "Parametric involute spur gear, 20 teeth, module 1.",
+    "tags": [
+      "gear",
+      "mechanical",
+      "module1",
+      "spur"
+    ],
+    "source": {
+      "name": "Printables",
+      "url": "https://www.printables.com/model/1234"
+    },
+    "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200",
+    "files": [
+      {
+        "type": "stl",
+        "url": "https://example.com/gear20t.stl"
+      }
+    ],
+    "popularity": 320,
+    "createdAt": "2025-09-10T10:00:00Z"
+  },
+  {
+    "id": "thangs-phone-stand",
+    "name": "Minimal Phone Stand",
+    "description": "Compact stand for phones, printable without supports.",
+    "tags": [
+      "stand",
+      "phone",
+      "desk"
+    ],
+    "source": {
+      "name": "Thangs",
+      "url": "https://thangs.com/model-123"
+    },
+    "image": "https://images.unsplash.com/photo-1510552776732-01acc9a4c225?w=1200",
+    "files": [
+      {
+        "type": "stl",
+        "url": "https://example.com/phone-stand.stl"
+      }
+    ],
+    "popularity": 210,
+    "createdAt": "2025-07-03T08:00:00Z"
+  }
+]

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – STL Hub</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">STL<span>Hub</span></div>
+      <nav class="nav">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./submit.html" class="nav-link">Submit</a>
+        <a href="./about.html" class="nav-link active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>About STL Hub</h1>
+      <p>Static, fast, searchable catalog for your 3D models. All data lives in <code>data/stl-index.json</code> so you can host on Vercel without a database.</p>
+      <ul>
+        <li>🔎 Fuzzy search by name, tags, and description (Fuse.js)</li>
+        <li>🏷️ Filters by tag and source</li>
+        <li>📄 Details page per model</li>
+        <li>🧩 Simple JSON data structure, easy to edit</li>
+        <li>🖼️ Clickable preview image opens the original source in a new tab</li>
+      </ul>
+      <p class="muted">Tip: keep thumbnails around 800–1200 px wide JPG/WEBP for quick loading.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> STL Hub</div>
+      <div><a href="./about.html">About</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
